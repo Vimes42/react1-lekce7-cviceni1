@@ -33,12 +33,11 @@ import './style.css';
 export const Ukol1 = () => {
   const [bulbOn, setBulbOn] = useState(false);
 
-  const handleSwitch = ({ shouldBeOn }) => {
-    if (shouldBeOn){
-      window.confirm("Opravdu chcete zapnout žárovku?");
-      setBulbOn(bulbOn);
-    }else{
-      setBulbOn(!bulbOn);
+  const handleSwitch = (  ) => {
+      if(!bulbOn && window.confirm("Opravdu chcete zapnout žárovku?")){
+        setBulbOn(true);
+      }else{
+      setBulbOn(false);
     }
     
   }
